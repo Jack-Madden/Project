@@ -14,5 +14,5 @@ while True:
     volume = sense.distance
     print(pitch)
     print(volume)
-    sender.send_message('play_this', pitch, volume)
+    sender.send_message('play_this', [pitch, volume])
     sleep(.1)
