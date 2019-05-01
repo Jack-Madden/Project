@@ -12,7 +12,5 @@ sender = udp_client.SimpleUDPClient('127.0.0.1', 4559)
 while True:
     pitch = round(sensor.distance * 100 + 30)
     volume = sense.distance
-    print(pitch)
-    print(volume)
     sender.send_message('play_this', [pitch, volume])
     sleep(.1)
